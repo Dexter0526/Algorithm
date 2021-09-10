@@ -1,4 +1,4 @@
-package kakao.first_2018;
+package kakao.eighteen.blind;
 
 import java.util.Arrays;
 

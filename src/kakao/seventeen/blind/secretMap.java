@@ -1,6 +1,12 @@
-package Algorithm.src.kakao.first_2017;
+package kakao.seventeen.blind;
 
 public class secretMap {
+
+	public static void main(String[] args) {
+
+	}
+
+
 	public String[] solution(int n, int[] arr1, int[] arr2) {
 	      String[] answer = {};
 	      answer = new String[n];
