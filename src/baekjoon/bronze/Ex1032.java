@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 //	명령 프롬프트
-public class Prompt {
+public class Ex1032 {
     public static void main(String[] args) {
         char[] answer;
         Scanner scanner = new Scanner(System.in);

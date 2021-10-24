@@ -2,7 +2,8 @@ package baekjoon.bronze;
 
 import java.util.Scanner;
 
-public class PlusCycle {
+// 더하기 사이클
+public class Ex1110 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
