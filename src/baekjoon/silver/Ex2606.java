@@ -9,30 +9,38 @@ import java.util.*;
 public class Ex2606 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        Map<Integer, ArrayList> graph = new HashMap<>();
+        int n = Integer.parseInt(bufferedReader.readLine());
+        int m = Integer.parseInt(bufferedReader.readLine());
 
-        while (true){
-            StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-            ArrayList temp = new ArrayList();
-            if(stringTokenizer == null) break;
-            if(!stringTokenizer.hasMoreTokens()) break;
+        Queue<Integer> queue = new LinkedList<>();
+        Set<Integer> discovered = new HashSet();
+        int[][] matrix = new int[n + 1][n + 1];
+        int answer = 0;
 
-            int node = Integer.parseInt(stringTokenizer.nextToken());
+        for(int i = 0; i < m; i++){
+            StringTokenizer st = new StringTokenizer(bufferedReader.readLine());
+            int node = Integer.parseInt(st.nextToken());
+            int next = Integer.parseInt(st.nextToken());
 
-            if(graph.containsKey(node)){
-                temp = graph.get(node);
-            }
-
-            if(stringTokenizer.hasMoreTokens()){
-                temp.add(stringTokenizer.nextToken());
-            }
-
-            graph.put(node, temp);
+            matrix[node][next] = matrix[next][node] = 1;
         }
 
-        for(Integer item : graph.keySet()){
-            System.out.println("key ::: " + item);
-            System.out.println("values ::: " + graph.get(item).toString());
+
+        queue.add(1);
+        discovered.add(1);
+
+        while (!queue.isEmpty()){
+            int temp = queue.remove();
+
+            for(int i = 1; i <= n; i++){
+                if(matrix[temp][i] == 1 && !discovered.contains(i)){
+                    discovered.add(i);
+                    queue.add(i);
+                    answer++;
+                }
+            }
+
         }
+        System.out.println(answer);
     }
 }
