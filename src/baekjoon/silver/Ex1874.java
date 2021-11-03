@@ -17,8 +17,8 @@ public class Ex1874 {
         int n = Integer.parseInt(bufferedReader.readLine());
         int start = 0;
 
-        String answer = array(bufferedReader, stringBuilder, n, start);
-
+//        String answer = array(bufferedReader, stringBuilder, n, start);
+        String answer = stack(bufferedReader, stringBuilder, n, start);
 
         System.out.println(answer);
     }
@@ -43,6 +43,30 @@ public class Ex1874 {
             }
 
             depth--;
+            stringBuilder.append("-").append("\n");
+        }
+
+        return stringBuilder.toString();
+    }
+
+//    스택 사용
+    private static String stack(BufferedReader bufferedReader, StringBuilder stringBuilder, int n, int start) throws IOException {
+        Stack<Integer> stack = new Stack<>();
+
+        for(int i = 0; i < n; i++){
+            int number = Integer.parseInt(bufferedReader.readLine());
+
+            if(start < number) {
+                for(int j = start + 1; j <= number; j++){
+                    stack.push(j);
+                    stringBuilder.append("+").append("\n");
+                }
+                start = number;
+            }else if(stack.peek() != number){
+                return "NO";
+            }
+
+            stack.pop();
             stringBuilder.append("-").append("\n");
         }
 
