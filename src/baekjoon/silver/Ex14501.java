@@ -12,11 +12,11 @@ public class Ex14501 {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(bufferedReader.readLine());
-        int[] dp = new int[n + 1];
-        int[] days = new int[n];
-        int[] cost = new int[n];
+        int[] dp = new int[n + 2];
+        int[] days = new int[n + 1];
+        int[] cost = new int[n + 1];
 
-        for(int i = 0; i < n; i++){
+        for(int i = 1; i <= n; i++){
             StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 
             days[i] = Integer.parseInt(stringTokenizer.nextToken());
@@ -24,11 +24,11 @@ public class Ex14501 {
 
         }
 
-        for(int i = 0; i < n; i++){
-            if(i + days[i] <= n){
-                dp[i + days[i]] = Math.max(dp[i + days[i]], dp[i] + cost[i]);
+        for(int i = n; i > 0; i--){
+            if(i + days[i] <= n + 1){
+                dp[i] = Math.max(dp[i + 1], dp[i + days[i]] + cost[i]);
             }else{
-                dp[i + 1] = Math.max(dp[i + 1], dp[i]);
+                dp[i] = dp[i + 1];
             }
         }
 
@@ -36,6 +36,6 @@ public class Ex14501 {
 
         System.out.println("=============================");
 
-        System.out.println(dp[n]);
+        System.out.println(dp[1]);
     }
 }
