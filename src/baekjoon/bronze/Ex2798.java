@@ -41,6 +41,9 @@ public class Ex2798 {
 
         for(int i = 0; i < cards.length; i++){
             if(!discovered.contains(cards[i])){
+
+                if(sum + cards[i] > m) continue;
+
                 discovered.add(cards[i]);
                 dfs(cards, depth + 1, discovered, sum + cards[i]);
                 discovered.remove(cards[i]);
