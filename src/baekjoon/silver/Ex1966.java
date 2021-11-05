@@ -66,6 +66,7 @@ public class Ex1966 {
             return importance;
         }
 
+//        안정성 보장 X
         @Override
         public int compareTo(Doc o) {
             return o.getImportance() - this.importance;
