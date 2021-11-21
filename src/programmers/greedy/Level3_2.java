@@ -15,18 +15,13 @@ public class Level3_2 {
 
     public static int solution(int[][] routes) {
         int answer = 0;
+        int min = Integer.MIN_VALUE;
 
-        Arrays.sort(routes, (int[] c1, int[] c2) -> c1[0] - c2[0]);
+        Arrays.sort(routes, (int[] o1, int[] o2) -> o1[1] - o2[1]);
 
-        for(int[] temp : routes){
-            System.out.println(Arrays.toString(temp));
-        }
-
-        int outNumber = routes[0][1];
         for(int i = 0; i < routes.length; i++){
-            if(outNumber <= routes[i][0]){
-                outNumber = routes[i][1];
-            }else{
+            if(routes[i][0] > min ){
+                min = routes[i][1];
                 answer++;
             }
         }
