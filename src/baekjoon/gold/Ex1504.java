@@ -11,7 +11,7 @@ public class Ex1504 {
     public static int E;
     public static List<Node>[] road;
     public static final int INF = 200_000_000;
-    
+
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
