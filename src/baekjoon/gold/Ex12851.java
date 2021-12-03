@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// 숨바꼭질 2
 public class Ex12851 {
     public static int answer = Integer.MAX_VALUE;
     public static int way = 1;
