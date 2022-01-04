@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // 2018년 카카오 오픈채팅방 문제
-public class openChat {
+public class OpenChat {
 	public String[] solution(String[] record) {
         String[] answer = {};
         Map<String, String> tempMap = new HashMap<String, String>();

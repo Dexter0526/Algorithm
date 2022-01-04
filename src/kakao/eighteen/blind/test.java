@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class test {
 
 	public static void main(String[] args) {
-		failureRate test = new failureRate();
+		FailureRate test = new FailureRate();
 		
 		int N = 5;
 		int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};

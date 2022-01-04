@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class failureRate {
+public class FailureRate {
 	public int[] solution(int N, int[] stages) {
 		int[] answer = {};
 		answer = new int[N];
