@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 // 삼각 달팽이
-public class Level2 {
+public class Level2_1 {
     public static void main(String[] args) {
 
     }
