@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+// 신고 결과 받기
 public class Level1 {
     public static void main(String[] args) {
 
