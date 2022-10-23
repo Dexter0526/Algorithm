@@ -1,6 +1,6 @@
 package programmers.dev;
 
-// 로또의 최고 순위와 최저 순위
+// 행렬 테두리 회전하기
 public class Level2 {
     public static void main(String[] args) {
 //rows	columns	queries	result
