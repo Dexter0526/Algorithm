@@ -3,6 +3,7 @@ package kakao.twentyone.intern;
 import java.util.HashMap;
 import java.util.Map;
 
+// 숫자 문자열과 영단어
 public class Level1 {
 
     public static void main(String[] args) {
